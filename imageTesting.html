@@ -7,22 +7,11 @@
 <body>
 
 <script type="text/javascript">
+	masterList[];
+	//masterList.push
     function processImage() {
-        // **********************************************
-        // *** Update or verify the following values. ***
-        // **********************************************
-
-        // Replace the subscriptionKey string value with your valid subscription key.
         var subscriptionKey = "3d26b64e6bf14c16822a3ac78d9c0b95";
 
-        // Replace or verify the region.
-        //
-        // You must use the same region in your REST API call as you used to obtain your subscription keys.
-        // For example, if you obtained your subscription keys from the westus region, replace
-        // "westcentralus" in the URI below with "westus".
-        //
-        // NOTE: Free trial subscription keys are generated in the westcentralus region, so if you are using
-        // a free trial subscription key, you should not need to change this region.
         var uriBase = "https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/analyze";
 
         // Request parameters.
@@ -74,6 +63,21 @@
             alert(errorString);
         });
     };
+    function object (imgLink, tags[]){
+    	this.imgLink=imgLink;
+    	this.tags[]=tags[];
+    	for (int s=0; s<masterList.length; i++){
+			for (int i=tags.length; i>=0; i--){
+				int counter=0;
+				if (tags[i].equals(masterList[s])){
+					counter++;
+				}
+				if (counter>1){
+					tags.splice(i, 1);
+				}
+			}
+		}
+	}
     //WordCloud(wrdCont, { list: list });
 </script>
 
